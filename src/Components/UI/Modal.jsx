@@ -26,7 +26,7 @@ const Modal = ({onClose, children}) => {
             {ReactDOM.createPortal(<BackDrop onClose={onClose}/>, overlay)}
             {ReactDOM.createPortal(<ModalOverlay>{children}</ModalOverlay>, overlay)}
         </>
-    )
+    );
 }
 
-export default Modal
+export default Modal;

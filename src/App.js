@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import Header from "./Components/Layouts/Header";
 import Meal from "./Components/Meals/Meal";
-import Card from "./Components/UI/Card";
 import Cart from "./Components/Cart/Cart";
+import CartProvide from "./Store/CartProvide";
 
 const App = () => {
 
@@ -18,13 +18,13 @@ const App = () => {
 
 
     return (
-        <>
+        <CartProvide>
             {isOpen && <Cart onClose={hideCardHandler}/>}
             <Header onIsOpen={ShowCardHandler}/>
             <main>
                 <Meal/>
             </main>
-        </>
+        </CartProvide>
     );
 };
 
